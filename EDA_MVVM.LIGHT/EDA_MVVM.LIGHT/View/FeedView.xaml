@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="EDA_MVVM.LIGHT.View.FeedView"
+             Title="Xamarin Feed">
+    <ContentPage.Content>
+
+        <StackLayout 
+            BackgroundColor="{StaticResource Pink}">
+
+            <flv:FlowListView 
+                RowHeight="200"
+                HorizontalOptions="CenterAndExpand"
+                FlowColumnCount="1" 
+                FlowColumnExpand="First" 
+                SeparatorVisibility="None"
+                HasUnevenRows="false"
+                IsInNativeLayout="true"
+
+                FlowItemTappedCommand="{Binding ItemSelectedCommand}"
+                FlowItemsSource="{Binding FeedCollection}" >
+
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+
+                        <Frame
+                            Style="{StaticResource FrameStyle}">
+                            <StackLayout>
+                                <Label 
+                                    Style="{StaticResource TitleStyle}"
+                                    Text="{Binding Titulo}">
+                                </Label>
+                                <Label
+                                    Style="{StaticResource AuthorStyle}"
+                                    Text="{Binding Autor}">
+                                </Label>
+                                <BoxView Color="Black" WidthRequest ="100" HeightRequest="0.5"/>
+                                <Label 
+                                    Style="{StaticResource TextStyle}"
+                                    Text="{Binding Texto}">
+                                </Label>
+                                <Label
+                                    HorizontalOptions="End"
+                                    TextColor="Blue"
+                                    Font="16"
+                                    Text="Ler mais...">
+                                </Label>
+                                    
+                            </StackLayout>
+                        </Frame>
+
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

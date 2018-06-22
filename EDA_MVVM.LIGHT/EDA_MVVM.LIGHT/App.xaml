@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EDA_MVVM.LIGHT.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Pink">#EE7777</Color>
+            <Color x:Key="Title">#333333</Color>
+            <Color x:Key="Author">#999999</Color>
+            <Color x:Key="Text">#666666</Color>
+
+            <Style x:Key="FrameStyle" TargetType="Frame">
+                <Setter Property="HeightRequest" Value="20" />
+                <Setter Property="BackgroundColor" Value="#FFF" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+
+            <Style x:Key="AuthorStyle" TargetType="Label">
+                <Setter Property="Font" Value="12" />
+                <Setter Property="TextColor" Value="{StaticResource Author}" />
+            </Style>
+
+            <Style x:Key="TitleStyle" TargetType="Label">
+                <Setter Property="Font" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource Title}" />
+            </Style>
+            
+            <Style x:Key="TextStyle" TargetType="Label">
+                <Setter Property="Font" Value="16" />
+                <Setter Property="TextColor" Value="{StaticResource Text}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
